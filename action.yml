@@ -20,6 +20,9 @@ inputs:
   url: # string
     description: 'Database URL'
     required: true
+  defaultSchemaName: # string
+    description: 'Name of the default schema to use'
+    required: false
   count: # integer
     description: 'Count for updateCount and rollbackCount'
     required: false
@@ -42,6 +45,7 @@ runs:
     - ${{ inputs.username }}
     - ${{ inputs.password }}
     - ${{ inputs.url }}
+    - ${{ inputs.defaultSchemaName }}
     - ${{ inputs.count }}
     - ${{ inputs.tag }}
     - ${{ inputs.date }}

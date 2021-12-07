@@ -6,10 +6,11 @@ CHANGELOGFILE=$3
 USERNAME=$4
 PASSWORD=$5
 URL=$6
-COUNT=$7
-TAG=$8
-DATE=$9
-REFERENCEURL=$10
+DEFAULTSCHEMANAME=$7
+COUNT=$8
+TAG=$9
+DATE=$10
+REFERENCEURL=$11
 
 PARAMS=()
 VALUES=()
@@ -39,6 +40,7 @@ function validate_operation() {
         check_required_param update classpath $CLASSPATH
         check_required_param update changeLogFile $CHANGELOGFILE
         check_required_param update url $URL
+        check_required_param update defaultSchemaName $DEFAULTSCHEMANAME
         ;;
 
     updateCount)
